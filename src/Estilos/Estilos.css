@@ -1,0 +1,156 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+}
+
+/*ESTILOS LOGIN*/
+.HeaderLogIn {
+  background-color: #103A44;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Logo {
+  top: 0;
+}
+
+.Logo img {
+  height: 150px;
+  width: 350px;
+}
+
+.LogIn {
+  border-radius: 20px;
+  height: 500px;
+  width: 400px;
+  background-color: whitesmoke;
+  text-align: center;
+}
+.LogIn h2 {
+  font-size: 40px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.BotonUsuario {
+  width: 60%;
+  height: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-color: whitesmoke;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #103A44;
+}
+.BotonUsuario::placeholder {
+  text-align: center;
+  color: rgba(157, 157, 157, 0.721);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+}
+
+.DivIngresar {
+  padding-top: 15px;
+}
+
+.Ingresar {
+  background-color: red;
+  color: white;
+  height: 40px;
+  width: 55%;
+  border-radius: 10px;
+  border-color: red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+.Ingresar:hover {
+  background-color: white;
+  color: red;
+  border-color: red;
+  transition: 0.3s;
+}
+
+.OlvideContrasena a h5 {
+  color: rgb(109, 185, 226);
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/*ESTILOS INVENTARIO*/
+.HeaderInventario {
+  background-color: #103A44;
+  width: 100%;
+  height: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DivHeader {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.DivHeader img {
+  height: 125px;
+  width: 250px;
+}
+
+.CerrarSesion {
+  padding: 20px 20px 0px 0px;
+  color: white;
+}
+.CerrarSesion:hover {
+  color: red;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.BarraBusqueda {
+  min-width: 400px;
+  height: 35px;
+  border-radius: 20px;
+  text-align: center;
+  border-color: whitesmoke;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #103A44;
+  margin: 0px 0px 0px 50px;
+}
+
+nav {
+  background-color: #004dd2;
+  display: flex;
+  color: white;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+  height: 60px;
+}
+nav ul li {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav ul:hover {
+  background-color: white;
+  color: blue;
+  transition: 0.5s;
+  cursor: pointer;
+}
