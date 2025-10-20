@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 
 const LogIn = () => {
     return <>
-        <header class="HeaderLogIn">
-            <div class="Logo">
+        <header className="HeaderLogIn">
+            <div className="Logo">
                 <img src="/Foltec.png" alt="LogoFoltec" />
             </div>
             <form action="">
@@ -28,15 +28,15 @@ const LogIn = () => {
                     className="BotonUsuario"
                     placeholder="Contraseña "/>
                     
-                    <div class="DivIngresar">
+                    <div className="DivIngresar">
                         <Link to="/PaginaInventario">
-                        <button type="submit" class="Ingresar">
+                        <button type="submit" className="Ingresar">
                             Ingresar
                         </button>
                         </Link> 
                     </div>
 
-                    <div class="OlvideContrasena">
+                    <div className="OlvideContrasena">
                         <br />
                         <br />
                         <a href="###"><h5>Olvidé mi contraseña</h5></a>

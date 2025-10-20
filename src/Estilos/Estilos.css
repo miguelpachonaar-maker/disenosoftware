@@ -105,7 +105,7 @@ a {
 }
 
 .DivHeader img {
-  height: 125px;
+  height: 13vh;
   width: 250px;
 }
 
@@ -136,21 +136,24 @@ nav {
   display: flex;
   color: white;
 }
-nav ul {
+nav button {
   display: flex;
   align-items: center;
   justify-content: space-between;
   justify-content: space-around;
   list-style-type: none;
   width: 100%;
-  height: 60px;
-}
-nav ul li {
+  height: 6vh;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: #004dd2;
+  border: none;
 }
-nav ul:hover {
-  background-color: white;
-  color: blue;
+nav button:hover {
+  background-color: rgb(1, 1, 120);
   transition: 0.5s;
   cursor: pointer;
 }
+
+/*INFOINVENTARIO*/
