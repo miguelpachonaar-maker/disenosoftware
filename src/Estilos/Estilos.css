@@ -1,5 +1,6 @@
 * {
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 0;
 }
 
@@ -16,12 +17,10 @@
 .Logo {
   top: 0;
 }
-
 .Logo img {
   height: 150px;
   width: 350px;
 }
-
 .LogIn {
   border-radius: 20px;
   height: 500px;
@@ -44,14 +43,11 @@
   margin-bottom: 20px;
   text-align: center;
   border-color: whitesmoke;
-  font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #103A44;
 }
 .BotonUsuario::placeholder {
   text-align: center;
   color: rgba(157, 157, 157, 0.721);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 15px;
 }
 
@@ -66,8 +62,6 @@
   width: 55%;
   border-radius: 10px;
   border-color: red;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
 }
 .Ingresar:hover {
   background-color: white;
@@ -79,7 +73,6 @@
 .OlvideContrasena a h5 {
   color: rgb(109, 185, 226);
   text-decoration: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 17px;
 }
 
@@ -88,7 +81,7 @@ a {
 }
 
 
-/*ESTILOS INVENTARIO*/
+/*ESTILOS USUARIOS*/
 .HeaderInventario {
   background-color: #103A44;
   width: 100%;
@@ -103,10 +96,10 @@ a {
   text-align: center;
   align-items: center;
 }
-
 .DivHeader img {
   height: 13vh;
   width: 250px;
+  padding-left: 60px;
 }
 
 .CerrarSesion {
@@ -125,18 +118,14 @@ a {
   border-radius: 20px;
   text-align: center;
   border-color: whitesmoke;
-  font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #103A44;
-  margin: 0px 0px 0px 50px;
 }
 
-nav {
-  background-color: #004dd2;
+.NavPrincipal {
   display: flex;
   color: white;
 }
-nav button {
+.NavPrincipal button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -144,16 +133,128 @@ nav button {
   list-style-type: none;
   width: 100%;
   height: 6vh;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 15px;
   color: white;
-  background-color: #004dd2;
+  background-color: #0c6f5b;
   border: none;
 }
-nav button:hover {
+.NavPrincipal button:hover {
+  background-color: #103A44;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/*TITULO-SECCIONES*/
+.TituloSecciones {
+  display: flex;
+  justify-content: space-around;
+}
+.TituloSecciones h2 {
+  font-size: 30px;
+  color: orange;
+  font-weight: bold;
+}
+.SeccionPrincipal {
+  height: 69vh;
+}
+/*ESTILOS TABLA*/
+.DivTablaUsuarios {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  border: 2px;
+  border-radius: 20px;
+}
+thead tr {
+  background-color: rgb(246, 209, 178);
+}
+th, td {
+  padding: 0px 10px 0px 10px;
+  border: 1px solid #666;
+  padding: 4px;
+}
+tbody tr:hover {
+  background-color: #666;
+  cursor: cell;
+}
+
+/*ESTILOS USUARIOS*/
+.EstiloFormEquipos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EstiloFormEquipos button {
+  border-radius: 10px;
+  margin: 0px 10px 0px 10px;
+  height: 6vh;
+  color: white;
+  background-color: red;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EstiloFormEquipos button:hover {
   background-color: rgb(1, 1, 120);
   transition: 0.5s;
   cursor: pointer;
 }
 
-/*INFOINVENTARIO*/
+/*ESTILO FORM EQUIPOS*/
+.DivCamposFormEquipos {
+  justify-content: center;
+  text-align: center;
+}
+.BotonesFormEquipos {
+  justify-content: center;
+  text-align: center;
+}
+.CamposFormEquipos {
+  height: 5vh;
+  width: 35vh;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+  border-color: #0ac49f;
+}
+
+.BotonGuardar {
+  background-color: #0ac49f;
+  color: white;
+  height: 40px;
+  width: 35vh;
+  border-radius: 10px;
+  border-color: #0c6f5b;
+  margin: 0px 10px 0px 10px;
+}
+.BotonGuardar:hover {
+  background-color: #022241;
+  border-color: white;
+  transition: 0.3s;
+}
+
+.BotonEliminar {
+  background-color: #022241;
+  color: white;
+  height: 40px;
+  width: 35vh;
+  border-radius: 10px;
+  border-color: #022241;
+  margin: 0px 10px 0px 10px;
+}
+.BotonEliminar:hover {
+  background-color: red  ;
+  border-color: white;
+  transition: 0.3s;
+}
+
+footer {
+  background-color: #103A44;
+  height: 6vh;
+  text-align: center;
+  color: white; 
+  width: 100%;
+}
