@@ -19,6 +19,7 @@ const PaginaInventario = () => {
         { id: 'Computadoras', texto: 'Computadoras' },
         { id: 'Seguridad', texto: 'Seguridad' },
         { id: 'Localizacion', texto: 'Localización' },
+        { id: 'Soporte', texto: 'Soporte' },
     ];
     
     // 3. Renderizado Condicional del Contenido de la Sección (Opcional, pero más limpio en React)
@@ -81,6 +82,17 @@ const PaginaInventario = () => {
                         </div>
                     </section>
                 );
+            case 'Soporte':
+                return (
+                    // Asegúrate de que el ID aquí sea 'Localizacion', no 'Lozalizacion' como en tu original.
+                    <section id="Soporte"> 
+                        <div className='TituloSecciones'>
+                            <br />
+                            <h2>Soporte</h2>
+                            <br />
+                        </div>
+                    </section>
+                );
             default:
             return null;
         }
@@ -114,7 +126,9 @@ const PaginaInventario = () => {
         <br />
         <br />
         <footer>
-            Derechos reservados
+            <p>
+                &copy; Derechos reservados
+            </p>
         </footer>
     </>
 }

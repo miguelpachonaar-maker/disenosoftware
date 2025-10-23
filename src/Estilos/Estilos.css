@@ -56,17 +56,17 @@
 }
 
 .Ingresar {
-  background-color: red;
+  background-color: #274A9B;
   color: white;
   height: 40px;
   width: 55%;
   border-radius: 10px;
-  border-color: red;
+  border-color: #274A9B;
 }
 .Ingresar:hover {
   background-color: white;
-  color: red;
-  border-color: red;
+  color: orange;
+  border-color: orange;
   transition: 0.3s;
 }
 
@@ -191,22 +191,28 @@ tbody tr:hover {
   margin: 0px 10px 0px 10px;
   height: 6vh;
   color: white;
-  background-color: red;
+  background-color: #1C5E47;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .EstiloFormEquipos button:hover {
-  background-color: rgb(1, 1, 120);
+  background-color: orange;
   transition: 0.5s;
   cursor: pointer;
 }
 
 /*ESTILO FORM EQUIPOS*/
+.DivTodoForm {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .DivCamposFormEquipos {
   justify-content: center;
   text-align: center;
+  position: relative;
 }
 .BotonesFormEquipos {
   justify-content: center;
@@ -220,9 +226,19 @@ tbody tr:hover {
   margin: 10px;
   border-color: #0ac49f;
 }
+.EtiquetaInputForm {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 10px;
+  font-size: 16px;
+  margin-left: 25px;
+  padding: 0px 5px 0px 5px;
+  background-color: white;
+  color: #0ac49f;
+}
 
 .BotonGuardar {
-  background-color: #0ac49f;
+  background-color: #274A9B;
   color: white;
   height: 40px;
   width: 35vh;
@@ -231,18 +247,18 @@ tbody tr:hover {
   margin: 0px 10px 0px 10px;
 }
 .BotonGuardar:hover {
-  background-color: #022241;
+  background-color: orange;
   border-color: white;
   transition: 0.3s;
 }
 
 .BotonEliminar {
-  background-color: #022241;
+  background-color: #274A9B;
   color: white;
   height: 40px;
   width: 35vh;
   border-radius: 10px;
-  border-color: #022241;
+  border-color: #274A9B;
   margin: 0px 10px 0px 10px;
 }
 .BotonEliminar:hover {
@@ -251,10 +267,51 @@ tbody tr:hover {
   transition: 0.3s;
 }
 
+/*ESTILOS FORM ENTREGAS Y DEVOLUCIONES*/
+.EtiquetaInputEntregas {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 10px;
+  font-size: 16px;
+  margin-left: 25px;
+  padding: 0px 5px 0px 5px;
+  background-color: white;
+  color: #274A9B;
+}
+.CamposFormEntregas {
+  height: 5vh;
+  width: 35vh;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+  border-color: #274A9B;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  height: 5vh;
+  width: 35vh;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+  border-color: #274A9B;
+}
+
+.TituloSecciones2 {
+  display: flex;
+  justify-content: space-around;
+}
+.TituloSecciones2 h2 {
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+
+/*FOOTER*/
 footer {
   background-color: #103A44;
   height: 6vh;
   text-align: center;
   color: white; 
   width: 100%;
+  padding: 17px 0px 0px 0px;
 }

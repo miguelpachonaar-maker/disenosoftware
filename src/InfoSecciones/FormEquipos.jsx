@@ -23,99 +23,171 @@ const FormEquipos = () => {
                 return (
                     <section id="Formulario">
                         <br />
-                        <div>
+                        <div className='TituloSecciones2'>
+                            <h2>Registro equipos</h2>
+                        </div>
+                        <br />
+                        <div className='DivTodoForm'>
                             <div className='DivCamposFormEquipos'>
+                                <label class="EtiquetaInputForm">ID PC</label>
                                 <input 
                                 type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
                                 className="CamposFormEquipos"
-                                placeholder='ID PC'
+                                placeholder='EQING01'
                                 />
-
+                            </div>
+                            <div className='DivCamposFormEquipos'>
+                                <label class="EtiquetaInputForm">Serial</label>
                                 <input 
                                 type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
                                 className="CamposFormEquipos"
-                                placeholder='Serial'
+                                placeholder='MAC85924'
                                 />
-
+                            </div>
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputForm">SKU</label>
                                 <input 
-                                type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
+                                type="text"  
                                 className="CamposFormEquipos"
-                                placeholder='SKU'
+                                placeholder='MAC-MBP16'
                                 />
-
-                                <input 
-                                type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
+                            </div>      
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputForm">Descripción</label>
+                                <input
+                                type="text"  
                                 className="CamposFormEquipos"
                                 placeholder='Descripción'
                                 />
-
+                            </div>
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputForm">Usuario</label>
                                 <input 
                                 type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
                                 className="CamposFormEquipos"
-                                placeholder='Usuario asignado'
+                                placeholder='Sebastian Lara'
                                 />
-
+                            </div>     
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputForm">Contraseña</label>
                                 <input 
-                                type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
+                                type="text"
                                 className="CamposFormEquipos"
-                                placeholder='Contraseña'
-                                />
-
-                                <input 
-                                type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
-                                className="CamposFormEquipos"
-                                placeholder='Área'
-                                />
-
-                                <input 
-                                type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
-                                className="CamposFormEquipos"
-                                placeholder='Acceso remoto'
-                                />
-
-                                <input 
-                                type="text" 
-                                name="Usuario" 
-                                id="Usuario" 
-                                className="CamposFormEquipos"
-                                placeholder='Estado'
+                                placeholder='********'
                                 />
                             </div>
-                            <br />
-                            <div className="BotonesFormEquipos">
-                                <button type="submit" className="BotonGuardar">
-                                    Guardar
-                                </button>
-                                <button type="submit" className="BotonGuardar">
-                                    Modificar
-                                </button>
-                                <button type="submit" className="BotonEliminar">
-                                    Eliminar
-                                </button>
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputForm">Área</label>
+                                <input 
+                                type="text"
+                                className="CamposFormEquipos"
+                                placeholder='Ingeniería'
+                                />
+                            </div>      
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputForm">Acceso remoto</label>
+                                <input 
+                                type="text" 
+                                className="CamposFormEquipos"
+                                placeholder='192.168.1.2'
+                                />
                             </div>
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputForm">Estado</label>
+                                <input 
+                                type="text" 
+                                className="CamposFormEquipos"
+                                placeholder='ACTIVO'
+                                />
+                            </div>
+                        </div>     
+                        <br />
+                        <div className="BotonesFormEquipos">
+                            <button type="submit" className="BotonGuardar">
+                                Guardar
+                            </button>
+                            <button type="submit" className="BotonGuardar">
+                                Modificar
+                            </button>
+                            <button type="submit" className="BotonEliminar">
+                                Eliminar
+                            </button>
                         </div>
                     </section>
                 );
             case 'EntregasYDevoluciones':
                 return (
                     <section id="EntregasYDevoluciones">
-                        <h2>Soy entregas y Devoluciones</h2>
+                        <br />
+                        <div className='TituloSecciones2'>
+                            <h2>Entregas y devoluciones</h2>
+                        </div>
+                        <br />
+                        <div className='DivTodoForm'>
+                            <div className='DivCamposFormEquipos'>
+                                <label class="EtiquetaInputEntregas">Gestión</label>
+                                <select name="EntregaDevolucion" id="EntregaDevolucion" className="CamposFormEntregas">
+                                    <option value="" disabled selected> Elige una opción</option>
+                                    <option value="Entrega">Entrega</option>
+                                    <option value="Devolucion">Devolucion</option>
+                                </select>
+                            </div>
+                            <div className='DivCamposFormEquipos'>
+                                <label class="EtiquetaInputEntregas">Código Gestión</label>
+                                <input 
+                                type="text"
+                                className="CamposFormEntregas"
+                                placeholder='IN001'
+                                />
+                            </div>
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputEntregas">Fecha IN/OUT</label>
+                                <input 
+                                type="date" 
+                                className="CamposFormEntregas"
+                                placeholder='DD/MM/AAAA'
+                                />
+                            </div>      
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputEntregas">Cedula Usuario</label>
+                                <input
+                                type="text" 
+                                name="Usuario" 
+                                id="Usuario" 
+                                className="CamposFormEntregas"
+                                placeholder='1234567890'
+                                />
+                            </div>
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputEntregas">ID PC</label>
+                                <input 
+                                type="text" 
+                                name="Usuario" 
+                                id="Usuario" 
+                                className="CamposFormEntregas"
+                                placeholder='EQING01n'
+                                />
+                            </div>     
+                            <div className='DivCamposFormEquipos'>
+                                <label for="Usuario" class="EtiquetaInputEntregas">Documento</label>
+                                <input 
+                                type="file" 
+                                accept=".pdf, .docx"                                
+                                />
+                            </div>
+                        </div>     
+                        <br />
+                        <div className="BotonesFormEquipos">
+                            <button type="submit" className="BotonGuardar">
+                                Guardar
+                            </button>
+                            <button type="submit" className="BotonGuardar">
+                                Modificar
+                            </button>
+                            <button type="submit" className="BotonEliminar">
+                                Eliminar
+                            </button>
+                        </div>
                     </section>
                 );
             default:
