@@ -22,11 +22,10 @@ const FormEquipos = () => {
             case 'Formulario':
                 return (
                     <section id="Formulario">
-                        <br />
                         <div className='TituloSecciones2'>
+                            <img src="https://static.vecteezy.com/system/resources/previews/010/882/188/non_2x/monitor-screen-computer-icon-display-electronic-flat-device-equipment-office-business-pc-front-view-vector.jpg" alt="" />
                             <h2>Registro equipos</h2>
                         </div>
-                        <br />
                         <div className='DivTodoForm'>
                             <div className='DivCamposFormEquipos'>
                                 <label class="EtiquetaInputForm">ID PC</label>
@@ -45,7 +44,7 @@ const FormEquipos = () => {
                                 />
                             </div>
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputForm">SKU</label>
+                                <label class="EtiquetaInputForm">SKU</label>
                                 <input 
                                 type="text"  
                                 className="CamposFormEquipos"
@@ -53,7 +52,7 @@ const FormEquipos = () => {
                                 />
                             </div>      
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputForm">Descripción</label>
+                                <label class="EtiquetaInputForm">Descripción</label>
                                 <input
                                 type="text"  
                                 className="CamposFormEquipos"
@@ -61,7 +60,7 @@ const FormEquipos = () => {
                                 />
                             </div>
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputForm">Usuario</label>
+                                <label class="EtiquetaInputForm">Usuario</label>
                                 <input 
                                 type="text" 
                                 className="CamposFormEquipos"
@@ -69,15 +68,15 @@ const FormEquipos = () => {
                                 />
                             </div>     
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputForm">Contraseña</label>
+                                <label class="EtiquetaInputForm">Contraseña</label>
                                 <input 
-                                type="text"
+                                type="password"
                                 className="CamposFormEquipos"
                                 placeholder='********'
                                 />
                             </div>
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputForm">Área</label>
+                                <label class="EtiquetaInputForm">Área</label>
                                 <input 
                                 type="text"
                                 className="CamposFormEquipos"
@@ -85,20 +84,21 @@ const FormEquipos = () => {
                                 />
                             </div>      
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputForm">Acceso remoto</label>
+                                <label class="EtiquetaInputForm">Usuario AnyDesk</label>
                                 <input 
-                                type="text" 
+                                type="number" 
                                 className="CamposFormEquipos"
-                                placeholder='192.168.1.2'
+                                placeholder='238 878 456'
                                 />
                             </div>
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputForm">Estado</label>
-                                <input 
-                                type="text" 
-                                className="CamposFormEquipos"
-                                placeholder='ACTIVO'
-                                />
+                                <label class="EtiquetaInputEntregas">Estado</label>
+                                <select className="CamposFormEntregas">
+                                    <option value="" disabled selected> Elige una opción</option>
+                                    <option value="Entrega">Activo</option>
+                                    <option value="Devolucion">Inactivo</option>
+                                    <option value="Devolucion">Reparación</option>
+                                </select>
                             </div>
                         </div>     
                         <br />
@@ -118,11 +118,10 @@ const FormEquipos = () => {
             case 'EntregasYDevoluciones':
                 return (
                     <section id="EntregasYDevoluciones">
-                        <br />
                         <div className='TituloSecciones2'>
+                            <img src="https://cdn-icons-png.flaticon.com/512/13330/13330701.png" alt="" />
                             <h2>Entregas y devoluciones</h2>
                         </div>
-                        <br />
                         <div className='DivTodoForm'>
                             <div className='DivCamposFormEquipos'>
                                 <label class="EtiquetaInputEntregas">Gestión</label>
@@ -141,7 +140,7 @@ const FormEquipos = () => {
                                 />
                             </div>
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputEntregas">Fecha IN/OUT</label>
+                                <label class="EtiquetaInputEntregas">Fecha IN/OUT</label>
                                 <input 
                                 type="date" 
                                 className="CamposFormEntregas"
@@ -149,9 +148,9 @@ const FormEquipos = () => {
                                 />
                             </div>      
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputEntregas">Cedula Usuario</label>
+                                <label class="EtiquetaInputEntregas">Cedula Usuario</label>
                                 <input
-                                type="text" 
+                                type="number" 
                                 name="Usuario" 
                                 id="Usuario" 
                                 className="CamposFormEntregas"
@@ -159,7 +158,7 @@ const FormEquipos = () => {
                                 />
                             </div>
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputEntregas">ID PC</label>
+                                <label class="EtiquetaInputEntregas">ID PC</label>
                                 <input 
                                 type="text" 
                                 name="Usuario" 
@@ -169,7 +168,7 @@ const FormEquipos = () => {
                                 />
                             </div>     
                             <div className='DivCamposFormEquipos'>
-                                <label for="Usuario" class="EtiquetaInputEntregas">Documento</label>
+                                <label class="EtiquetaInputEntregas">Documento</label>
                                 <input 
                                 type="file" 
                                 accept=".pdf, .docx"                                

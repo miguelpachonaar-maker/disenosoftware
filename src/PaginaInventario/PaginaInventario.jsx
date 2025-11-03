@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 import ListaUsuarios from '../InfoSecciones/ListaUsuarios';
 import ListaEquipos from '../InfoSecciones/ListaEquipos.jsx';
 import FormEquipos from '../InfoSecciones/FormEquipos';
+import FormUsuarios from '../InfoSecciones/FormUsuarios.jsx';
+import FormAdmin from '../InfoSecciones/FormAdmin.jsx';
 
 const PaginaInventario = () => {   
-    const [seccionActiva, setSeccionActiva] = useState('Usuarios');
+    const [seccionActiva, setSeccionActiva] = useState('Inicio');
 
     // 2. Función Manejadora de Clic: Actualiza el estado con el ID de la sección.
     const handleMenuClick = (targetId) => {
@@ -26,48 +28,70 @@ const PaginaInventario = () => {
     const SeccionContenido = () => {
         // En React, el renderizado condicional con estado es más limpio que usar 'style="display:none"'
         switch (seccionActiva) {
+            case 'Inicio':
+            return (
+                <section id="Inicio">
+                    <div className='TituloSecciones'>
+                        <h2>¡Bienvenido a FOLTEC gestor de inventarios!</h2>
+                    </div>
+                    <div className='ImagenInicio'>
+                        <img src="https://mecaluxes.cdnwm.com/img/blog/gestion-de-inventario-gestion-stock.1.13.jpg?imwidth=1024&imdensity=1" alt="Imagen de gestor" />
+                    </div>
+                </section>
+            );
+            
             case 'Usuarios':
                 return (
                     <section id="Usuarios">
-                        <br />
-                        <div className='SeccionPrincipal'>
-                            <div className='TituloSecciones'>
+                        <div className='TituloSecciones'>
                             <h2>Lista de usuarios</h2>
+                            <br />
                             <input 
                                 type="text" 
                                 className="BarraBusqueda"
                                 placeholder="Buscar..."
                             /> 
-                            </div>
-                            <ListaUsuarios></ListaUsuarios> 
+                        </div>
+                        <div className='TituloSecciones'>
+                            <ListaUsuarios></ListaUsuarios>
+                        </div>
+                        <div className='TituloSecciones'>
+                            <br />
+                            <FormUsuarios></FormUsuarios>
+                        </div>
+                        <div>
+                            <br />
+                            <FormAdmin></FormAdmin>
+                            <br />
+                            <br />
                         </div>
                     </section>
                 );
             case 'Computadoras':
                 return (
                     <section id="Computadoras">
-                        <br />
                         <div className='TituloSecciones'>
                             <h2>Registro de equipos</h2>
+                            <br />
                             <input 
                                 type="text" 
                                 className="BarraBusqueda"
                                 placeholder="Buscar..."
                             />
                         </div>
-                        <br />
-                        <ListaEquipos></ListaEquipos>
-                        <br />
-                        <FormEquipos></FormEquipos>
+                        <div className='TituloSecciones'>
+                            <ListaEquipos></ListaEquipos>
+                        </div>
+                        <div className='TituloSecciones'>
+                            <FormEquipos></FormEquipos>
+                        </div>
                     </section>
                 );
             case 'Seguridad':
                 return (
                     <section id="Seguridad">
                         <div className='TituloSecciones'>
-                            <br />
                             <h2>Seguridad</h2>
-                            <br />
                         </div>
                     </section>
                 );
@@ -76,9 +100,7 @@ const PaginaInventario = () => {
                     // Asegúrate de que el ID aquí sea 'Localizacion', no 'Lozalizacion' como en tu original.
                     <section id="Localizacion"> 
                         <div className='TituloSecciones'>
-                            <br />
                             <h2>Lozalización</h2>
-                            <br />
                         </div>
                     </section>
                 );
@@ -87,14 +109,12 @@ const PaginaInventario = () => {
                     // Asegúrate de que el ID aquí sea 'Localizacion', no 'Lozalizacion' como en tu original.
                     <section id="Soporte"> 
                         <div className='TituloSecciones'>
-                            <br />
                             <h2>Soporte</h2>
-                            <br />
                         </div>
                     </section>
                 );
             default:
-            return null;
+                return null;
         }
     };
     
@@ -121,14 +141,10 @@ const PaginaInventario = () => {
             ))}
         </nav>
         <div id="ContenidoInventario">
-                {SeccionContenido()} 
+                {SeccionContenido()}
         </div>
-        <br />
-        <br />
         <footer>
-            <p>
                 &copy; Derechos reservados
-            </p>
         </footer>
     </>
 }

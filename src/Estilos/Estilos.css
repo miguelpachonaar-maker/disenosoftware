@@ -6,12 +6,12 @@
 
 /*ESTILOS LOGIN*/
 .HeaderLogIn {
-  background-color: #103A44;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgb(0, 72, 91);
 }
 
 .Logo {
@@ -25,10 +25,11 @@
   border-radius: 20px;
   height: 500px;
   width: 400px;
-  background-color: whitesmoke;
+  background-color: white;
   text-align: center;
 }
 .LogIn h2 {
+  color: black;
   font-size: 40px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding-top: 50px;
@@ -56,17 +57,17 @@
 }
 
 .Ingresar {
-  background-color: #274A9B;
+  background-color: rgb(1, 21, 172);
   color: white;
   height: 40px;
   width: 55%;
   border-radius: 10px;
-  border-color: #274A9B;
+  border-color: rgb(1, 21, 172);
 }
 .Ingresar:hover {
-  background-color: white;
-  color: orange;
-  border-color: orange;
+  background-color: rgb(163, 3, 1);
+  color: white;
+  border-color: rgb(163, 3, 1);
   transition: 0.3s;
 }
 
@@ -83,7 +84,7 @@ a {
 
 /*ESTILOS USUARIOS*/
 .HeaderInventario {
-  background-color: #103A44;
+  background-color: rgb(0, 72, 91);
   width: 100%;
   height: auto;
   color: white;
@@ -134,27 +135,25 @@ a {
   width: 100%;
   height: 6vh;
   color: white;
-  background-color: #0c6f5b;
+  background-color: rgb(1, 21, 172);
   border: none;
 }
 .NavPrincipal button:hover {
-  background-color: #103A44;
+  background-color: orange;
   transition: 0.5s;
   cursor: pointer;
 }
 
 /*TITULO-SECCIONES*/
 .TituloSecciones {
-  display: flex;
-  justify-content: space-around;
+  text-align: center;
+  justify-content: center;
+  margin: 40px 0px 40px 0px;
 }
 .TituloSecciones h2 {
   font-size: 30px;
-  color: orange;
+  color: red;
   font-weight: bold;
-}
-.SeccionPrincipal {
-  height: 69vh;
 }
 /*ESTILOS TABLA*/
 .DivTablaUsuarios {
@@ -191,11 +190,12 @@ tbody tr:hover {
   margin: 0px 10px 0px 10px;
   height: 6vh;
   color: white;
-  background-color: #1C5E47;
+  background-color: rgb(1, 21, 172);
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 15px 0px 15px;
 }
 .EstiloFormEquipos button:hover {
   background-color: orange;
@@ -224,7 +224,7 @@ tbody tr:hover {
   border-radius: 10px;
   text-align: center;
   margin: 10px;
-  border-color: #0ac49f;
+  border-color: rgb(0, 72, 91);
 }
 .EtiquetaInputForm {
   position: absolute;
@@ -234,16 +234,16 @@ tbody tr:hover {
   margin-left: 25px;
   padding: 0px 5px 0px 5px;
   background-color: white;
-  color: #0ac49f;
+  color: rgb(0, 72, 91);
 }
 
 .BotonGuardar {
-  background-color: #274A9B;
+  background-color: rgb(1, 21, 172);
   color: white;
   height: 40px;
   width: 35vh;
   border-radius: 10px;
-  border-color: #0c6f5b;
+  border-color: rgb(1, 21, 172);
   margin: 0px 10px 0px 10px;
 }
 .BotonGuardar:hover {
@@ -253,12 +253,12 @@ tbody tr:hover {
 }
 
 .BotonEliminar {
-  background-color: #274A9B;
+  background-color: rgb(1, 21, 172);
   color: white;
   height: 40px;
   width: 35vh;
   border-radius: 10px;
-  border-color: #274A9B;
+  border-color: rgb(1, 21, 172);
   margin: 0px 10px 0px 10px;
 }
 .BotonEliminar:hover {
@@ -298,20 +298,44 @@ input[type="file"]::-webkit-file-upload-button {
 
 .TituloSecciones2 {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 40px 0px 40px 0px;
 }
 .TituloSecciones2 h2 {
   font-size: 30px;
   color: red;
   font-weight: bold;
 }
+.TituloSecciones2 img {
+  height: 40px;
+  width: 40px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 5px;
+}
+
+/*ESTILOS INICIO DEFAULT*/
+.ImagenInicio {
+  text-align: center;
+  margin: 40px 0px 40px 0px;
+}
+.ImagenInicio img {
+  height: 50%;
+  width: 50%;
+  border-radius: 30px;
+}
+
+/*ESTILOS REGISTRO USUARIOS*/
+.TituloSecciones3 {
+  background-color: #274A9B;
+}
 
 /*FOOTER*/
 footer {
-  background-color: #103A44;
+  display: flex;
+  background-color: black;
   height: 6vh;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   color: white; 
   width: 100%;
-  padding: 17px 0px 0px 0px;
 }
