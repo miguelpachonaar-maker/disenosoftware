@@ -29,7 +29,6 @@ const LogIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Detiene la recarga de la página por defecto del formulario
 
-        // Asegúrate de que esta URL coincida con la ruta de login en tu backend (ej. http://localhost:5000/api/login)
         const backendUrl = 'http://localhost:4000/api/login'; 
 
         try {

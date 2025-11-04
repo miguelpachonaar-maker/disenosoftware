@@ -120,6 +120,7 @@ a {
   text-align: center;
   border-color: whitesmoke;
   color: #103A44;
+  margin: 0px 0px 0px 100px;
 }
 
 .NavPrincipal {
@@ -146,25 +147,33 @@ a {
 
 /*TITULO-SECCIONES*/
 .TituloSecciones {
-  text-align: center;
-  justify-content: center;
-  margin: 40px 0px 40px 0px;
+  margin: 60px 0px 20px 100px;
 }
 .TituloSecciones h2 {
   font-size: 30px;
   color: red;
   font-weight: bold;
 }
+.TituloSecciones img {
+  height: 40px;
+  width: 40px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 5px;
+}
+.EstiloTitulos {
+  display: flex;
+}
+
 /*ESTILOS TABLA*/
 .DivTablaUsuarios {
-  display: flex;
-  justify-content: center;
   text-align: center;
+  margin: 40px 0px 40px 100px;
 }
 table {
   border-collapse: collapse;
   border: 2px;
   border-radius: 20px;
+  width: 85%;
 }
 thead tr {
   background-color: rgb(246, 209, 178);
@@ -174,6 +183,9 @@ th, td {
   border: 1px solid #666;
   padding: 4px;
 }
+td {
+  color: #103A44;
+}
 tbody tr:hover {
   background-color: #666;
   cursor: cell;
@@ -182,8 +194,7 @@ tbody tr:hover {
 /*ESTILOS USUARIOS*/
 .EstiloFormEquipos {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0px 0px 0px 100px;
 }
 .EstiloFormEquipos button {
   border-radius: 10px;
@@ -206,17 +217,15 @@ tbody tr:hover {
 /*ESTILO FORM EQUIPOS*/
 .DivTodoForm {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  margin: 0px 40px 40px 100px;
 }
 .DivCamposFormEquipos {
-  justify-content: center;
   text-align: center;
   position: relative;
 }
 .BotonesFormEquipos {
-  justify-content: center;
-  text-align: center;
+  margin: 40px 0px 40px 100px;
 }
 .CamposFormEquipos {
   height: 5vh;
@@ -252,21 +261,6 @@ tbody tr:hover {
   transition: 0.3s;
 }
 
-.BotonEliminar {
-  background-color: rgb(1, 21, 172);
-  color: white;
-  height: 40px;
-  width: 35vh;
-  border-radius: 10px;
-  border-color: rgb(1, 21, 172);
-  margin: 0px 10px 0px 10px;
-}
-.BotonEliminar:hover {
-  background-color: red  ;
-  border-color: white;
-  transition: 0.3s;
-}
-
 /*ESTILOS FORM ENTREGAS Y DEVOLUCIONES*/
 .EtiquetaInputEntregas {
   position: absolute;
@@ -296,23 +290,6 @@ input[type="file"]::-webkit-file-upload-button {
   border-color: #274A9B;
 }
 
-.TituloSecciones2 {
-  display: flex;
-  justify-content: center;
-  margin: 40px 0px 40px 0px;
-}
-.TituloSecciones2 h2 {
-  font-size: 30px;
-  color: red;
-  font-weight: bold;
-}
-.TituloSecciones2 img {
-  height: 40px;
-  width: 40px;
-  margin: 0px 5px 0px 5px;
-  border-radius: 5px;
-}
-
 /*ESTILOS INICIO DEFAULT*/
 .ImagenInicio {
   text-align: center;
@@ -325,8 +302,22 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 /*ESTILOS REGISTRO USUARIOS*/
-.TituloSecciones3 {
-  background-color: #274A9B;
+.TituloInicio {
+  text-align: center;
+  justify-content: center;
+  margin: 40px ;
+}
+.TituloInicio h2 {
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+.Separador {
+  height: 60px;
+  width: 100%;
+  background-color: #ebeaea;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.732);;
 }
 
 /*FOOTER*/

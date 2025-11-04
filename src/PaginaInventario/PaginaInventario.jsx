@@ -1,8 +1,6 @@
 import '../Estilos/Estilos.css'
 import {Link} from 'react-router-dom'
 import React, { useState } from 'react';
-import ListaUsuarios from '../InfoSecciones/ListaUsuarios';
-import ListaEquipos from '../InfoSecciones/ListaEquipos.jsx';
 import FormEquipos from '../InfoSecciones/FormEquipos';
 import FormUsuarios from '../InfoSecciones/FormUsuarios.jsx';
 import FormAdmin from '../InfoSecciones/FormAdmin.jsx';
@@ -31,7 +29,7 @@ const PaginaInventario = () => {
             case 'Inicio':
             return (
                 <section id="Inicio">
-                    <div className='TituloSecciones'>
+                    <div className='TituloInicio'>
                         <h2>¡Bienvenido a FOLTEC gestor de inventarios!</h2>
                     </div>
                     <div className='ImagenInicio'>
@@ -43,46 +41,21 @@ const PaginaInventario = () => {
             case 'Usuarios':
                 return (
                     <section id="Usuarios">
-                        <div className='TituloSecciones'>
-                            <h2>Lista de usuarios</h2>
-                            <br />
-                            <input 
-                                type="text" 
-                                className="BarraBusqueda"
-                                placeholder="Buscar..."
-                            /> 
-                        </div>
-                        <div className='TituloSecciones'>
-                            <ListaUsuarios></ListaUsuarios>
-                        </div>
-                        <div className='TituloSecciones'>
-                            <br />
+                        <div>
                             <FormUsuarios></FormUsuarios>
                         </div>
+                        <br />
+                        <br />
+                        <div className='Separador'></div>
                         <div>
-                            <br />
                             <FormAdmin></FormAdmin>
-                            <br />
-                            <br />
                         </div>
                     </section>
                 );
             case 'Computadoras':
                 return (
                     <section id="Computadoras">
-                        <div className='TituloSecciones'>
-                            <h2>Registro de equipos</h2>
-                            <br />
-                            <input 
-                                type="text" 
-                                className="BarraBusqueda"
-                                placeholder="Buscar..."
-                            />
-                        </div>
-                        <div className='TituloSecciones'>
-                            <ListaEquipos></ListaEquipos>
-                        </div>
-                        <div className='TituloSecciones'>
+                        <div>
                             <FormEquipos></FormEquipos>
                         </div>
                     </section>
@@ -91,7 +64,9 @@ const PaginaInventario = () => {
                 return (
                     <section id="Seguridad">
                         <div className='TituloSecciones'>
-                            <h2>Seguridad</h2>
+                            <div className='EstiloTitulos'>
+                                <h2>Seguridad</h2>
+                            </div>
                         </div>
                     </section>
                 );

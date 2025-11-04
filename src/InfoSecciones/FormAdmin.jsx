@@ -2,10 +2,13 @@ import '../Estilos/Estilos.css'
 
 const FormAdmin = () => {
     return <>
-        <div className='TituloSecciones2'>
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/128/320/small/a-3d-ui-contact-address-book-icon-png.png" alt="" />
-            <h2>Registro Usuarios de soporte</h2>
-        </div>        
+        <br />
+        <div className='TituloSecciones'>
+            <div className='EstiloTitulos'>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/049/128/320/small/a-3d-ui-contact-address-book-icon-png.png" alt="" />
+                <h2>Registro Usuarios de soporte</h2>
+            </div> 
+        </div>
         <div className='DivTodoForm'>
             <div className='DivCamposFormEquipos'>
                 <label class="EtiquetaInputForm">Usuario</label>
@@ -24,7 +27,6 @@ const FormAdmin = () => {
                 />
             </div>
         </div>
-        <br />
         <div className="BotonesFormEquipos">
             <button type="submit" className="BotonGuardar">
                 Guardar
