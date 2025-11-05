@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import FormEquipos from '../InfoSecciones/FormEquipos';
 import FormUsuarios from '../InfoSecciones/FormUsuarios.jsx';
 import FormAdmin from '../InfoSecciones/FormAdmin.jsx';
+import FormEntregasyDev from '../InfoSecciones/FormEntregasyDevoluciones.jsx';
+import SeccionSoporte from '../InfoSecciones/SeccionSoporte.jsx';
+import SeccionLocalizador from '../InfoSecciones/SeccionLocalizador.jsx';
 
 const PaginaInventario = () => {   
     const [seccionActiva, setSeccionActiva] = useState('Inicio');
@@ -17,7 +20,6 @@ const PaginaInventario = () => {
     const menuOpciones = [
         { id: 'Usuarios', texto: 'Usuarios' },
         { id: 'Computadoras', texto: 'Computadoras' },
-        { id: 'Seguridad', texto: 'Seguridad' },
         { id: 'Localizacion', texto: 'Localización' },
         { id: 'Soporte', texto: 'Soporte' },
     ];
@@ -41,13 +43,10 @@ const PaginaInventario = () => {
             case 'Usuarios':
                 return (
                     <section id="Usuarios">
-                        <div>
+                        <div className='DivFormUsuarios'>
                             <FormUsuarios></FormUsuarios>
                         </div>
-                        <br />
-                        <br />
-                        <div className='Separador'></div>
-                        <div>
+                        <div className='DivFormUsuarios'>
                             <FormAdmin></FormAdmin>
                         </div>
                     </section>
@@ -55,27 +54,23 @@ const PaginaInventario = () => {
             case 'Computadoras':
                 return (
                     <section id="Computadoras">
-                        <div>
+                        <div className='DivFormUsuarios'>
                             <FormEquipos></FormEquipos>
                         </div>
-                    </section>
-                );
-            case 'Seguridad':
-                return (
-                    <section id="Seguridad">
-                        <div className='TituloSecciones'>
-                            <div className='EstiloTitulos'>
-                                <h2>Seguridad</h2>
-                            </div>
+                        <div className='DivFormUsuarios'>
+                            <FormEntregasyDev></FormEntregasyDev>
                         </div>
                     </section>
                 );
             case 'Localizacion':
                 return (
                     // Asegúrate de que el ID aquí sea 'Localizacion', no 'Lozalizacion' como en tu original.
-                    <section id="Localizacion"> 
+                    <section id="Localizacion">
                         <div className='TituloSecciones'>
-                            <h2>Lozalización</h2>
+                                <h2>Lozalización</h2>
+                        </div>
+                        <div className='DivLocalizador'>
+                            <SeccionLocalizador></SeccionLocalizador>
                         </div>
                     </section>
                 );
@@ -83,9 +78,10 @@ const PaginaInventario = () => {
                 return (
                     // Asegúrate de que el ID aquí sea 'Localizacion', no 'Lozalizacion' como en tu original.
                     <section id="Soporte"> 
-                        <div className='TituloSecciones'>
+                        <div className='TituloSecciones2'>
                             <h2>Soporte</h2>
                         </div>
+                        <SeccionSoporte></SeccionSoporte>
                     </section>
                 );
             default:
@@ -94,6 +90,8 @@ const PaginaInventario = () => {
     };
     
     return <>
+        <div className='Cabecera'>
+        
         <header className="HeaderInventario">
             <div className="DivHeader">
                 <img src="/Foltec.png" alt="LogoFoltec" />
@@ -115,6 +113,7 @@ const PaginaInventario = () => {
                 </button>
             ))}
         </nav>
+        </div>
         <div id="ContenidoInventario">
                 {SeccionContenido()}
         </div>

@@ -4,6 +4,8 @@
   margin: 0;
 }
 
+@import 'leaflet/dist/leaflet.css';
+
 /*ESTILOS LOGIN*/
 .HeaderLogIn {
   height: 100vh;
@@ -145,6 +147,10 @@ a {
   cursor: pointer;
 }
 
+.DivFormUsuarios {
+  padding-bottom: 25vh;
+}
+
 /*TITULO-SECCIONES*/
 .TituloSecciones {
   margin: 60px 0px 20px 100px;
@@ -187,8 +193,8 @@ td {
   color: #103A44;
 }
 tbody tr:hover {
-  background-color: #666;
-  cursor: cell;
+  background-color: #dacdab;
+  cursor: auto;
 }
 
 /*ESTILOS USUARIOS*/
@@ -280,14 +286,13 @@ tbody tr:hover {
   margin: 10px;
   border-color: #274A9B;
 }
-
-input[type="file"]::-webkit-file-upload-button {
+.input1[type="file"]::-webkit-file-upload-button {
   height: 5vh;
   width: 35vh;
   border-radius: 10px;
   text-align: center;
   margin: 10px;
-  border-color: #274A9B;
+  background-color: rgba(220, 220, 220, 0.419);
 }
 
 /*ESTILOS INICIO DEFAULT*/
@@ -317,7 +322,112 @@ input[type="file"]::-webkit-file-upload-button {
   height: 60px;
   width: 100%;
   background-color: #ebeaea;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.732);;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.732);
+  margin: 70px 0px 60px 0px;
+}
+
+/*SECCION LOCALIZADOR*/
+.DivLocalizador {
+  padding-bottom: 100px;
+  margin: 0vh 10vh 0vh 10vh;
+}
+.DimensionMapa {
+  justify-content: center;
+  width: 80vh;
+  height: 70vh;
+}
+
+/*SECCION SOPORTE*/
+.TituloSecciones2 {
+  padding: 60px 0px 20px 100px;
+  background-color: rgba(254, 253, 224, 0.424);;
+}
+.TituloSecciones2 h2 {
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+.FormSoporte {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(254, 253, 224, 0.424);
+  padding-bottom: 100px;
+}
+.SubFormSoporte {
+  border-radius: 30px;
+  margin-left: 100px;
+}
+
+.DivCamposFormSoporte {
+  text-align: left;
+  position: relative;
+  margin: 15px 0px 15px 0px;
+}
+.CamposFormSoporte {
+  height: 5vh;
+  width: 50vh;
+  padding-left: 20px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: red;
+}
+.TextArea {
+  height: 20vh;
+  width: 50vh;
+  padding-left: 20px;
+  border-radius: 10px;
+  text-align: left;
+  border-color: red;
+}
+
+.ImagenSoporte {
+  width: 80vh;
+  text-align: center;
+  margin: 0px 100px 40px 0px;
+}
+.ImagenSoporte img {
+  width: 100%;
+  height: 60%;
+  border-radius: 20px;
+}
+h4 {
+  font-weight: normal;
+}
+
+.LogoSoporte {
+  text-align: center;
+}
+.LogoSoporte img {
+  width: 20vh;
+  height: 10vh;
+}
+
+.input2[type="file"]::-webkit-file-upload-button {
+  height: 5vh;
+  width: 35vh;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+  background-color: rgb(249, 249, 249);
+  border-color: red;
+}
+
+.BotonFormSoporte {
+  margin: 15px 0px 15px 0px;
+}
+.BotonEnviar {
+  background-color: blue;
+  color: white;
+  height: 40px;
+  width: 35vh;
+  border-radius: 10px;
+  border-color: blue;
+  margin: 0px 10px 0px 10px;
+}
+.BotonEnviar:hover {
+  background-color: red;
+  border-color: white;
+  transition: 0.3s;
 }
 
 /*FOOTER*/

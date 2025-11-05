@@ -28,51 +28,26 @@ const FormUsuarios = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            const response = await fetch(API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            const nuevoUsuarioSimulado = {
+            ...formData,
+            // Simulamos un ID de MongoDB (único y necesario para la 'key' de React)
+            _id: Date.now().toString(), 
+            };
 
-            if (!response.ok) {
-                throw new Error(`Error al guardar: ${response.statusText}`);
-            }
+            alert('Usuario guardado con éxito: ');
+            setUsuarios(prevUsuarios => [...prevUsuarios, nuevoUsuarioSimulado]);
 
-            const data = await response.json();
-            alert('Usuario guardado con éxito: ' + data._id);
-            
             // Opcional: Limpiar el formulario y recargar la lista
             setFormData({
                 NombresApellidos: '', TipoDocumento: '', NumeroDocumento: '', Contacto: '', Correo: '',
                 Area: '', Cargo: '', Usuario: ''
             });
-            fetchUsuarios(); // Recargar la lista para visualizar el nuevo usuario
-            
-        } catch (error) {
-            console.error('Error al guardar el usuario:', error);
-            alert('Error al guardar el usuario.');
-        }
     };
 
     // Función para cargar los datos (Buscar o Visualizar)
     const fetchUsuarios = async () => {
-        try {
-            const response = await fetch(API_URL); // Asume que GET /api/usuarios devuelve todos
-            
-            if (!response.ok) {
-                throw new Error(`Error al buscar usuarios: ${response.statusText}`);
-            }
-            
-            const data = await response.json();
-            setUsuarios(data); // Almacena los usuarios en el estado
-            
-        } catch (error) {
-            console.error('Error al obtener usuarios:', error);
-            alert('Error al cargar la lista de usuarios.');
-        }
+        console.warn("ADVERTENCIA: La carga inicial de usuarios está desactivada o fallando debido a un backend inactivo.");
+        setUsuarios([]);
     };
     
     // 5. Cargar los usuarios al montar el componente para visualización
@@ -87,7 +62,7 @@ const FormUsuarios = () => {
             <div className='TituloSecciones'>
                 <div className='EstiloTitulos'>
                     <img src="https://cdn-icons-png.flaticon.com/512/3200/3200751.png" alt="" />
-                    <h2>Registro Usuarios</h2>
+                    <h2>Formulario de usuarios</h2>
                 </div>
             </div>        
             <div className='DivTodoForm'>
@@ -190,22 +165,13 @@ const FormUsuarios = () => {
                 <button type="submit" className="BotonGuardar">
                     Guardar
                 </button>
-                <button type="button" className="BotonGuardar" onClick={fetchUsuarios}>
-                    Buscar
-                </button>
             </div>
             <div className='TituloSecciones'>
                 <div className='EstiloTitulos'>
-                    <img src="https://static.vecteezy.com/system/resources/previews/010/882/188/non_2x/monitor-screen-computer-icon-display-electronic-flat-device-equipment-office-business-pc-front-view-vector.jpg" alt="" />
-                    <h2>Lista de usuarios</h2>
+                    <h2>Registro de usuarios</h2>
                 </div>
-            </div>
-            <div >
-                <input 
-                type="text" 
-                className="BarraBusqueda"
-                placeholder="Buscar..."
-                />
+                <br />
+                <h4>En este espacio podrás visualizar todos los registros del formulario</h4>
             </div>
             {usuarios.length > 0 ? (
                 <div className='DivTablaUsuarios'>
@@ -239,7 +205,7 @@ const FormUsuarios = () => {
                     </table>
                 </div>
             ) : (
-                <p>No hay usuarios registrados aún.</p>
+                <p></p>
             )}
         </form>
     </>
